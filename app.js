@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //rules to win frogger
     function win() {
-        if (squares[4].contains.classList('frog')) {
+        if (squares[5].classList.contains('frog')) {
             result.innerHTML = "You Win!"
             squares[currentIndex].classList.remove('frog')
             clearInterval(timerId)
@@ -149,9 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //function to lose frogger
     function lose() {
-        if ((currentTime === 0) || (squares[currentIndex].contains('c1'))
-        || (squares[currentIndex].contains('l4'))
-        || (squares[currentIndex].contains('l5'))
+        if ((currentTime === 0) || (squares[currentIndex].classlist.contains('c1'))
+        || (squares[currentIndex].classList.contains('l4'))
+        || (squares[currentIndex].classList.contains('l5'))
         ) {
             result.innerHTML = "You Lose"
             squares[currentIndex].classList.remove('frog')
@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
         moveWithLogLeft()
         moveWithLogRight()
         lose()
-        win()
     }
 
     //to start and pause game
